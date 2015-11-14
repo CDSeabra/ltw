@@ -1,0 +1,9 @@
+Criar HTML para login, register, evento, profile(?)
+
+Criar as funções em PHP para esta merda toda
+Fazer as funções SQL (queries)
+
+Carregar os eventos 
+
+Fazer o Session (!!!!!!!)
+Fazer o Search
