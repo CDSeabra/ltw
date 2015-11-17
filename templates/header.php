@@ -41,11 +41,12 @@
 				</li>
 			</ul>
 		</div>
+		<div id="sidebar_back"></div>
 		<div id="sidebar">
 		<ul>
-				<li><a href="">Create Event</a></li>
-				<li><a href="">Edit My Events</a></li>
-				<li><a href="">See invitations</a></li>
+				<li><a href="">Evento A Que Vai 1</a></li>
+				<li><a href="">Evento A Que Vai 1</a></li>
+				<li><a href="">Uma lista dos eventos a que vai</a></li>
 				</ul>
 			<!--TODO carregar lista dos eventos que o user aderiu--> 
 		</div>

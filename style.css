@@ -1,7 +1,7 @@
 html{
-	width: 800px;
+	width: 1000px;
 	margin: 0 auto;
-	background-color: #D4B7F0
+	background-color: #2381A1
 	
 }
 
@@ -9,11 +9,6 @@ body{
 	margin: 0;
 	background-color: white;
 }
-
-/**{
-	width: 800px;
-	margin: 0 auto;
-}*/
 
 a{
 	text-decoration: none;
@@ -23,10 +18,15 @@ a{
 	color: white;
 }
 
+@font-face {
+    font-family: NouvelleVague;
+    src: url(bin/nouvelle_vague_final.ttf);
+}
+
 #header {
 	background-color: #595856;
 	color: white;
-	font-family: "Arial";
+	font-family: NouvelleVague;
 	height: 150px;
 }
 
@@ -43,7 +43,7 @@ a{
 }
 
 #menu {
-	background-color: #291708;
+	background-color: #2F383B;
 	color: white;
 	height: 41px;
 }
@@ -119,9 +119,10 @@ a{
 }
 
 #sidebar {
-  background-color: #669933;
+  background-color: #2F383B;
   float: right;
   width: 200px;
+  border-style: ridge;
   }
  
 #sidebar a{
