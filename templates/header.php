@@ -10,12 +10,22 @@
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
-		<div id="login">
-			<form id="login" action="login.php" method="get">
-			<input type="submit" value="Login">
-			<input type="submit" value="Register"></form>
+		<?php
+		if (isset($_SESSION['username'])){?>
+		<div id="logout">
+			<form id="logout" action="action_logout.php" method="get">
+			<input type="submit" value="Logout"></form>
 		</div>
-		<div id="header">
+		<?} else {?>
+		<div id="login">
+			<form id="login" action="action_login.php" method="get">
+			<input type="text" name="username" placeholder="Username"></input>
+			<input type="password" name="password" placeholder="Password"></input>
+			<input type="submit" name= "login" value="login">			
+			<input type="submit" name= "register" value="register"></form>
+		</div>
+		<?} ?>
+			<div id="header">
 			<h1>Online Event Manager</h1>
 			<h2>The best manager in the world (well...)</h2>
 		</div>

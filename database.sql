@@ -8,7 +8,6 @@ CREATE TABLE events (
 	id_event INTEGER PRIMARY KEY AUTOINCREMENT,
 	name VARCHAR NOT NULL,
 	dat VARCHAR NOT NULL,
-	image INTEGER REFERENCES images,
 	description TEXT,
 	tipo VARCHAR NOT NULL,
 	privado BOOLEAN
@@ -30,6 +29,7 @@ create table comments (
 
 create table images (
 	id_imagem INTEGER PRIMARY KEY AUTOINCREMENT,
-	name VARCHAR NOT NULL,
-	image BLOB
+	id_event REFERENCES events,
+	name VARCHAR NOT NULL	
 );
+
