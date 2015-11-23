@@ -13,27 +13,28 @@
 		<?php
 		if (isset($_SESSION['username'])){?>
 		<div id="logout">
-			<form id="logout" action="action_logout.php" method="get">
-			<input type="submit" value="Logout"></form>
+			<form id="logout" action="action_logout.php" method="post">
+			<label>Hello, <?=$_SESSION['username']?>!  </label><input type="submit" value="Logout"></form>
 		</div>
 		<?} else {?>
 		<div id="login">
-			<form id="login" action="action_login.php" method="get">
+			<form id="login" action="action_login.php" method="post">
 			<input type="text" name="username" placeholder="Username"></input>
 			<input type="password" name="password" placeholder="Password"></input>
-			<input type="submit" name= "login" value="login">			
-			<input type="submit" name= "register" value="register"></form>
+			<input type="submit" name= "login" value="Login">			
+			<input type="submit" name= "register" value="Register"></form>
 		</div>
 		<?} ?>
 			<div id="header">
-			<h1>Online Event Manager</h1>
+			<h1><a href='events.php'>Online Event Manager</a></h1>
 			<h2>The best manager in the world (well...)</h2>
 		</div>
 		<div id="menu">
-			<ul>
-				<li><a href="">Create Event</a></li>
+			<ul><?php if (isset($_SESSION['username'])){?>
+				<li><a href="create_events.php">Create Event</a></li>
 				<li><a href="">Edit My Events</a></li>
 				<li><a href="">See invitations</a></li>
+			<?}?>
 				<li><form id="searchbar" action="search.php" method="get">
 					<input type="text" name="search" placeholder="Search"></input>
 					<input type="submit" value=""></input>

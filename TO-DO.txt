@@ -1,11 +1,29 @@
-Criar HTML para login, register, evento, profile(?)
+Criar HTML para evento, profile(?)
 
 Criar as funções em PHP para esta merda toda
 Fazer as funções SQL (queries)
 
 Carregar os eventos 
 
-Fazer o Session (!!!!!!!)
 Fazer o Search
+
+Fazer com que o menu só apareça "create event" e etc quando logged in. 
+Ou seja, quando logged out só aparecer search. 
+
+Só dar para criar evento quando logged in. 
+
+AJEITAR O CSS PARA TUDO
+(fazer com tempo livre: faux column para sidebar)
+
+Fazer Edit Event
+Fazer Single Event (IMAGENS. PERCEBER COMO FUNCAM IMAGENS)
+Transformar o events.php numa lista de todos os single events válidos
+
+Sidebar com eventos a que vai
+
+Ver convites <- fazer 
+Relacionado: aceitar convites; convidar pessoas
+
+Em single events: fazer posts/comentários 
 
 Questoes: 

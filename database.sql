@@ -33,6 +33,6 @@ create table images (
 	name VARCHAR NOT NULL	
 );
 
-INSERT INTO users VALUES (NULL, 'aaaa', 'bbbb');
+INSERT INTO users VALUES (NULL, 'aaaa', '8aed1322e5450badb078e1fb60a817a1df25a2ca');
 
-INSERT INTO users VALUES (NULL, 'cccc', 'dddd');
+INSERT INTO users VALUES (NULL, 'cccc', '01464e1616e3fdd5c60c0cc5516c1d1454cc4185');

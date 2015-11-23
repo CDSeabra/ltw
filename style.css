@@ -37,6 +37,10 @@ a{
 	padding-left: 15px;
 }
 
+#header h1 a:visited {
+	color: white;
+}
+
 #header h2 {
 	margin: 0;
 	padding-left: 15px;
@@ -150,4 +154,12 @@ a{
 #login {
 	float: right;
 	padding: 4px;
+}
+
+#logout {
+	float: right;
+	padding: 4px;
+	color: white;
+	display: inline-block;
+    text-align: center;
 }
