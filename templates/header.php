@@ -45,11 +45,8 @@
 		<div id= "container2">
 		<div id= "container">
 		<div id="sidebar">
-		<ul>
-				<li><a href="">Evento A Que Vai 1</a></li>
-				<li><a href="">Evento A Que Vai 1</a></li>
-				<li><a href="">Uma lista dos eventos a que vai</a></li>
-				</ul>
-			<!--TODO carregar lista dos eventos que o user aderiu--> 
+		<?php foreach( $result as $row) {  ?>
+			 <p><?= $row['name'] ?></p>
+		<?php } ?>    
 		</div>
 		
