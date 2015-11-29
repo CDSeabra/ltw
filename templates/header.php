@@ -19,8 +19,8 @@
 		<?} else {?>
 		<div id="login">
 			<form id="login" action="action_login.php" method="post">
-			<input type="text" name="username" placeholder="Username"></input>
-			<input type="password" name="password" placeholder="Password"></input>
+			<input type="text" name="username" placeholder="Username" required></input>
+			<input type="password" title="At least 3 symbols containing at least 1 number, 1 lower, and 1 upper letter" type="text" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{3,}" required name="password" placeholder="Password"></input>
 			<input type="submit" name= "login" value="Login">			
 			<input type="submit" name= "register" value="Register"></form>
 		</div>
@@ -36,7 +36,7 @@
 				<li><a href="">See invitations</a></li>
 			<?}?>
 				<li><form id="searchbar" action="search.php" method="get">
-					<input type="text" name="search" placeholder="Search"></input>
+					<input type="text" name="search" placeholder="Search" required></input>
 					<input id="searchbutton" type="submit" value=""></input>
 					</form>
 				</li>

@@ -10,7 +10,7 @@ CREATE TABLE events (
 	dat VARCHAR NOT NULL,
 	description TEXT,
 	tipo VARCHAR NOT NULL,
-	privado BOOLEAN
+	privado VARCHAR
 );
 
 CREATE TABLE events_users (
