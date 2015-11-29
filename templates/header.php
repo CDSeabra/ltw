@@ -37,12 +37,13 @@
 			<?}?>
 				<li><form id="searchbar" action="search.php" method="get">
 					<input type="text" name="search" placeholder="Search"></input>
-					<input type="submit" value=""></input>
+					<input id="searchbutton" type="submit" value=""></input>
 					</form>
 				</li>
 			</ul>
 		</div>
-		<div id="sidebar_back"></div>
+		<div id= "container2">
+		<div id= "container">
 		<div id="sidebar">
 		<ul>
 				<li><a href="">Evento A Que Vai 1</a></li>

@@ -1,8 +1,8 @@
   <div class="event">
     <?php foreach( $result as $row) { ?>
-		<div class="news-item">
+		<div class="single-event">
 			<h3>Nome do evento: <?= $row['name'] ?></h3>
-			<p class="introduction">Tipo: <?=$row['tipo']?></p>
+			<p class="type">Tipo: <?=$row['tipo']?></p>
 			<? $image_name = getImage($row['id_event']); ?>
 			<img src="images/<?="$image_name"?>" alt="" width="300" height="200">
 			<p>Descrição: <?=$row['description']?></p>
@@ -22,4 +22,6 @@
     <p class="introduction">Tipo do evento</p>
     <p>Descrição do Evento</p>-->
     
+  </div>
+  </div>
   </div>

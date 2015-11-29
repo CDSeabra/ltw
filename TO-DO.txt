@@ -13,7 +13,6 @@ Ou seja, quando logged out só aparecer search.
 Só dar para criar evento quando logged in. 
 
 AJEITAR O CSS PARA TUDO
-(fazer com tempo livre: faux column para sidebar)
 
 Fazer Edit Event
 Fazer Single Event (IMAGENS. PERCEBER COMO FUNCAM IMAGENS)
