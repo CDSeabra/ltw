@@ -1,7 +1,7 @@
 html{
 	width: 1000px;
 	margin: 0 auto;
-	background-color: #2381A1
+	background: url("bin/background.png");
 	
 }
 
@@ -80,8 +80,8 @@ a{
 }
 
 .single-event > img {
-	height: 35%;
-	width: 35%;
+	height: 10%;
+	width: 10%;
 	float: left;
 	margin: 10px 10px 10px 10px;
 }

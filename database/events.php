@@ -21,10 +21,13 @@
   function getImage($id_event) {
 	global $db;
 	
-    $stmt = $db->prepare('SELECT images.name FROM images, events WHERE images.id_event = ? AND events.id_event = images.id_event');
+    //$stmt = $db->prepare('SELECT images.name FROM images, events WHERE images.id_event = ? AND events.id_event = images.id_event');
+	$stmt = $db->prepare('SELECT images.name FROM images WHERE images.id_event = ?');
     $stmt->execute(array($id_event));  
-
-    return $stmt->fetch();
+	$result = $stmt->fetch()[0];
+	//print_r($result);	
+		
+    return $result;
   }
   
   /*

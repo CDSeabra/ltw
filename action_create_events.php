@@ -50,8 +50,11 @@
 	$stmt = $db->prepare('INSERT INTO events VALUES (NULL, ?, ?, ?, ?, ?)');
 	$stmt->execute(array($_POST['event_name'], $_POST['event_date'], $_POST['event_description'], $_POST['event_type'], $_POST['private']));  
 	
-	$stmt2 = $db->prepare('INSERT INTO images VALUES (NULL, NULL, ?)');
-	$stmt2->execute(array($_POST['fileToUpload']));  
+	$last_id = $db->lastInsertId();
+	$stmt2 = $db->prepare('INSERT INTO images VALUES (NULL, ? , ?)');
+	echo "file: ". $_FILES['fileToUpload']['name'];
+	echo "id: " . $last_id;
+	$stmt2->execute(array( intval($last_id), $_FILES['fileToUpload']['name']));  
 
 	
 	header('Location: events.php');	//redirecionar para home 
