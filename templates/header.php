@@ -32,12 +32,12 @@
 		<div id="menu">
 			<ul><?php if (isset($_SESSION['username'])){?>
 				<li><a href="create_events.php">Create Event</a></li>
-				<li><a href="">Edit My Events</a></li>
-				<li><a href="">See invitations</a></li>
+				<li><a href="">My Events</a></li>
+				<li><a href="">See Invitations</a></li>
 			<?}?>
 				<li><form id="searchbar" action="search.php" method="get">
-					<input type="text" name="search" placeholder="Search" required></input>
-					<input id="searchbutton" type="submit" value=""></input>
+					<input type="text" name="search" placeholder="Search" required style="width: 150px;"></input>
+					<button id="searchbutton" type="submit" style="border: 0; background: transparent"><img src="bin/search.png" width="15" height="15" alt="submit" /></button>
 					</form>
 				</li>
 			</ul>
