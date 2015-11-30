@@ -5,7 +5,7 @@
 
 	//==========================================================================================
 	$target_dir = "images/";
-	$target_file = $target_dir . basename(strip_tags($_FILES["fileToUpload"]["name"]));
+	$target_file = $target_dir . $_SESSION['username'] . "-" . basename(strip_tags($_FILES["fileToUpload"]["name"]));
 	$uploadOk = 1;
 	$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 	// Check if image file is a actual image or fake image
@@ -56,7 +56,7 @@
 	$stmt2 = $db->prepare('INSERT INTO images VALUES (NULL, ? , ?)');
 	echo "file: ". $_FILES['fileToUpload']['name'];
 	echo "id: " . $last_id;
-	$stmt2->execute(array( intval($last_id), strip_tags($_FILES['fileToUpload']['name'])));
+	$stmt2->execute(array( intval($last_id), $_SESSION['username'] . "-" . strip_tags($_FILES['fileToUpload']['name'])));
 	
 	//insert into events_users
 	$stmt3 = $db->prepare('INSERT INTO events_users VALUES ((SELECT id_user FROM users WHERE username = ?),?,(SELECT id_user FROM users WHERE username = ?),?)');

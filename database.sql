@@ -1,6 +1,6 @@
 CREATE TABLE users (
   id_user INTEGER PRIMARY KEY AUTOINCREMENT,
-  username VARCHAR,
+  username VARCHAR UNIQUE,
   password VARCHAR
 );
 
