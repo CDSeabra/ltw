@@ -32,7 +32,7 @@
 		<div id="menu">
 			<ul><?php if (isset($_SESSION['username'])){?>
 				<li><a href="create_events.php">Create Event</a></li>
-				<li><a href="">My Events</a></li>
+				<li><a href="see_my_events.php">See My Events</a></li>
 				<li><a href="">See Invitations</a></li>
 			<?}?>
 				<li><form id="searchbar" action="search.php" method="get">
