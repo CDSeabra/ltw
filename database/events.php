@@ -23,14 +23,24 @@
 	return $stmt->fetchAll();
   }
   
-  function getEventsItem($id) {
+  function getMyEvents() {
 	global $db;
 	
-    $stmt = $db->prepare('SELECT * FROM events WHERE id = ?');
-    $stmt->execute(array($id));  
+    $stmt = $db->prepare('SELECT * FROM events, events_users WHERE events_users.id_event = events.id_event AND events_users.id_host = (
+	SELECT id_user FROM users WHERE username = ?)');
+    $stmt->execute(array($_SESSION['username']));
 
-    return $stmt->fetch();
+    return $stmt->fetchAll();
   }
+  
+	function getEventById($id) {
+		global $db;
+
+		$stmt = $db->prepare('SELECT * FROM events WHERE id_event = ?');
+		$stmt->execute(array($id));
+
+		return $stmt->fetch();
+	}
   
   function getImage($id_event) {
 	global $db;
