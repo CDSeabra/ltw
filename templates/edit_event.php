@@ -3,18 +3,18 @@
 		<fieldset>
 			<legend>Edit event:</legend>
 			<input type="hidden" name="id_event" value="<?=$event['id_event']?>"></input>
-			<input type="text" name="event_name" value="<?=$event['name']?>" required></input>
-			<input type="text" name="event_type" value="<?=$event['tipo']?>" required></input>
-			<input type="date" name="event_date" value="<?=$event['dat']?>"></input>
-			<textarea rows="4" cols="50" name="event_description"><?=htmlspecialchars($event['description'])?></textarea>
+			<input id="eventname" type="text" name="event_name" value="<?=$event['name']?>" required></input>
+			<input id="eventtype" type="text" name="event_type" value="<?=$event['tipo']?>" required></input>
+			<input type="date" name="event_date" value="<?=$event['dat']?>"></input> <br>
+			<textarea id="eventdes" rows="4" cols="50" name="event_description"><?=htmlspecialchars($event['description'])?></textarea> <br>
 			<?if($event['privado'] = 'true') {?>
 			<input type="radio" name="private" value="true" checked="checked">Private
-			<input type="radio" name="private" value="false" checked="">Public
+			<input type="radio" name="private" value="false" checked="">Public<br>
 			<? } else { ?>
 			<input type="radio" name="private" value="true" checked="">Private
-			<input type="radio" name="private" value="false" checked="checked">Public
+			<input type="radio" name="private" value="false" checked="checked">Public <br>
 			<? } ?>
-			<input type="file" name="fileToUpload" id="fileToUpload">
+			<input type="file" name="fileToUpload" id="fileToUpload"><br>
 			<input type="submit" name= "edit" value="Edit Event!">
 		</fieldset>
 	</form>

@@ -4,7 +4,7 @@ Fazer o Search --> M
 
 AJEITAR O CSS PARA TUDO --> nitidamente, Abrótea
 
-Fazer Single Event --> M
+Fazer Single Event (falta comments) --> M
 
 Sidebar com links dos eventos que foi convidado mas nao aceitou/recusou,
 com botões e checkboxes para usar JQUERY ao aceitar/recusar

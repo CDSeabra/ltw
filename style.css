@@ -72,8 +72,7 @@ a{
 #header h2 {
 	margin: 0;
 	padding-left: 15px;
-		font-style: normal;
-
+	font-style: normal;
 }
 
 #menu {
@@ -99,21 +98,22 @@ a{
 	
 }
 .single-event  > h3 {
-	margin: 0;
-	font-family: OldEurope;
 	font-size: 1.8em;
+	max-width: 500px;
 }
 
 .type {
-	font-style: italic;
 	padding-bottom: 10px;
 }
 
 .single-event > img {
-	height: 10%;
-	width: 10%;
 	float: left;
 	margin: 10px 10px 10px 10px;
+	display: block;
+    max-width:100px;
+    max-height:90px;
+    width: auto;
+    height: auto;
 }
 
 .single-event {
@@ -123,16 +123,18 @@ a{
 }
 
 .single-event ul li { 
-	display: inline; 
+	display: block; 
 	background-color: #38373B;
 	padding: 4px 12px;
+	margin-bottom: 12px;
 
 }
 
-.single-event ul{
-	padding-top: 15px;
+.single-event ul {
 	padding-bottom: 10px;
 	padding-left: 10px;
+	float: right;
+	clear: both;
 }
 
 .single-event ul a {
@@ -212,4 +214,29 @@ a{
     width:80%;
 	position:relative;	
 	left: 20%;
+}
+
+.single-event:hover {
+	background-color: #CF8F7A;
+}
+
+.single-event span{
+	max-width: 500px;
+}
+
+.single-event h3 {
+	margin: 0px;
+}
+
+#create_event input {
+	margin: 10px;	
+}
+
+#eventname, #eventtype {
+	padding-top: 2px;
+	padding-bottom: 3px;
+}
+
+#eventdes {
+	margin-left: 10px;
 }
