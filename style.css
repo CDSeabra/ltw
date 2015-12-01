@@ -30,6 +30,11 @@ a{
 }
 
 @font-face {
+    font-family: Coolvetica;
+    src: url(bin/coolvetica.ttf);
+}
+
+@font-face {
     font-family: ChronicDelivery;
     src: url(bin/ChronicDelivery.ttf);
 }
@@ -55,6 +60,7 @@ a{
 	font-family: SupernaturalKnight;
 	font-size: 120%;
 	height: 150px;
+	border-bottom: black solid;
 }
 
 #header h1 {
@@ -67,6 +73,13 @@ a{
 
 #header h1 a:visited {
 	color: white;
+}
+
+.single-event h3 a:visited {
+	color: black;
+}
+.single-event h3 a {
+	color: black;
 }
 
 #header h2 {
@@ -100,6 +113,14 @@ a{
 .single-event  > h3 {
 	font-size: 1.8em;
 	max-width: 500px;
+	font-family: Coolvetica;
+}
+
+.event_single  > h3 {
+	font-size: 1.8em;
+	max-width: 500px;
+	font-family: Coolvetica;
+	margin-left: 20px;
 }
 
 .type {
@@ -116,10 +137,31 @@ a{
     height: auto;
 }
 
+.event_single > img {
+	float: left;
+	margin: 10px 10px 10px 10px;
+	display: block;
+    max-width:100px;
+    max-height:90px;
+    width: auto;
+    height: auto;
+}
+
 .single-event {
-	border-bottom-style: solid;
+	border-right-style: solid;
+	border-top-style:solid;
 	padding-left: 1em;
 	padding-right: 1em;
+}
+
+.event_single {
+	padding-bottom: 50px;
+	border-bottom-style: solid;
+	border-top-style: solid;
+}
+
+.single-event:last-child {
+	border-bottom-style: solid;
 }
 
 .single-event ul li { 
@@ -127,6 +169,7 @@ a{
 	background-color: #38373B;
 	padding: 4px 12px;
 	margin-bottom: 12px;
+	text-align: center;
 
 }
 
@@ -216,6 +259,19 @@ a{
 	left: 20%;
 }
 
+.event_single {
+    float:right;
+    width:80%;
+	position:relative;	
+	left: 20%;
+}
+
+#comments {
+	width:80%;
+	position:relative;	
+	left: 20%;
+}
+
 .single-event:hover {
 	background-color: #CF8F7A;
 }
@@ -239,4 +295,23 @@ a{
 
 #eventdes {
 	margin-left: 10px;
+}
+
+#seeeventsprivacy {
+	margin-bottom: 0px;
+	
+}
+#comments h3 {
+	text-align: center; 
+}
+
+#commenttext, #commentbutton {
+	display: block;
+	margin-left: auto;
+    margin-right: auto;
+	margin-bottom: 5px;
+}
+
+#comments {
+	border-bottom-style: solid;
 }

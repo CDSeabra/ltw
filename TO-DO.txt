@@ -4,7 +4,7 @@ Fazer o Search --> M
 
 AJEITAR O CSS PARA TUDO --> nitidamente, Abrótea
 
-Fazer Single Event (falta comments) --> M
+Fazer Single Event (os comments estão a não funcionar) --> M (sim, tótil, sqn)
 
 Sidebar com links dos eventos que foi convidado mas nao aceitou/recusou,
 com botões e checkboxes para usar JQUERY ao aceitar/recusar
@@ -13,4 +13,6 @@ Relacionado: aceitar convites; convidar pessoas
 
 Em single events: fazer posts/comentários --> Abrótea
 
-Questoes: perguntar ao professor como fazer o search :D 
+Questoes:
+
+ALL HAIL CHIX QUE NOS VAI DIZER COMO FAZER O SEARCH

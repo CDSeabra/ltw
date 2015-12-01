@@ -4,10 +4,10 @@
 		<div class="single-event">
 			<ul>
 			  <li><a href="">Join</a></li>
-			  <li><a href="">Comments</a></li>
+			  <li><a href="single_event.php?id=<?=$row['id_event']?>">See More</a></li>
 			  <li><a href="">Share</a></li>
 			</ul>
-			<h3>Event's name: <?= $row['name'] ?></h3> <br>
+			<h3><a href="single_event.php?id=<?=$row['id_event']?>">Event's name: <?= $row['name'] ?></a></h3> <br>
 			<? $image_name = getImage($row['id_event']); ?>
 			<img src="images/<?="$image_name"?>" alt="Event's photo">
 			<span class="type">Type: <?=$row['tipo']?></span><br>

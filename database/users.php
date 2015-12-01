@@ -16,4 +16,14 @@
 
 		return $stmt->fetch() !== false;
 	}
+	
+	function getUsername($id_user) {
+		global $db;
+		$stmt = $db->prepare('SELECT username FROM users WHERE id_user = ?');
+		$stmt->execute(array($id_user));
+		
+		
+		$array = $stmt->fetch();
+		return implode("", (array)$array);
+	}
 ?>
