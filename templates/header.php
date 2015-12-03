@@ -46,7 +46,7 @@
 		<div id= "container">
 		<div id="sidebar">
 		<?php foreach( $result as $row) {  ?>
-			 <p><?= $row['name'] ?></p>
+			 <a href="single_event.php?id=<?=$row['id_event']?>"><?= $row['name'] ?></a>
 		<?php } ?>    
 		</div>
 		

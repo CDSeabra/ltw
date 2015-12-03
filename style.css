@@ -192,20 +192,21 @@ a{
 	vertical-align: bottom;
 }
  
-#sidebar p{
+#sidebar a{
   color: #ffffff;
   text-decoration: none;
 }
  
-#sidebar p {
+#sidebar a {
   list-style-type: none;
   text-align: center;
   padding: 20px;
 }
  
-#sidebar p {
+#sidebar a {
   width: 0px auto;
-  padding: 0;
+  padding-bottom: 10px;
+  display: block;
 }
 
 #footer {
@@ -314,4 +315,10 @@ a{
 
 #comments {
 	border-bottom-style: solid;
+}
+
+#singlecomment {
+	margin-bottom: 10px;
+	margin-top: 10px;
+	border-bottom: dashed 1px;
 }

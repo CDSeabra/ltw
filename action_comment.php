@@ -9,11 +9,11 @@
 	
 	$id_event = $_GET['id'];
 	$id_user = $stmt1->fetch();
-	var_dump($id_user);
+	$id_user = $id_user["id_user"];
 	$texto = $_POST['comment_text'];
 	
 	$stmt = $db->prepare('INSERT INTO comments VALUES (NULL, ?, ?, ?)');
 	$stmt->execute(array($id_event, $id_user, $texto));
 	
-	//header("Location: single_event.php?id=$id_event");	//redirecionar para home 
+	header("Location: single_event.php?id=$id_event");	//redirecionar para home 
 ?>

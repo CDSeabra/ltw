@@ -24,6 +24,7 @@
 		
 		
 		$array = $stmt->fetch();
+		$array = $array["username"];
 		return implode("", (array)$array);
 	}
 ?>
