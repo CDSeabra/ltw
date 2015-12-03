@@ -5,6 +5,7 @@
 			<ul>
 				<li><a href="edit_event.php?id_event=<?=$row['id_event']?>">Edit event</a></li>
 				<li><a href="">Share</a></li>
+				<li><a href="action_delete_event.php?id_event=<?=$row['id_event']?>">Delete Event CUIDADO NÃO VERIFICA</a></li>
 			</ul>	
 			<h3>Event's name: <?= $row['name'] ?></h3>
 			<p class="type">Type: <?=$row['tipo']?></p>

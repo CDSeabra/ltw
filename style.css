@@ -321,4 +321,9 @@ a{
 	margin-bottom: 10px;
 	margin-top: 10px;
 	border-bottom: dashed 1px;
+	margin-left: 5px;
+}
+
+#commentuser {
+	font-family: Coolvetica;
 }

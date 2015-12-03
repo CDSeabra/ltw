@@ -4,14 +4,15 @@ Fazer o Search --> M
 
 AJEITAR O CSS PARA TUDO --> nitidamente, Abrótea
 
-Fazer Single Event (os comments estão a não funcionar) --> M (sim, tótil, sqn)
-
 Sidebar com links dos eventos que foi convidado mas nao aceitou/recusou,
 com botões e checkboxes para usar JQUERY ao aceitar/recusar
 
 Relacionado: aceitar convites; convidar pessoas
 
-Em single events: fazer posts/comentários --> Abrótea
+action_delete_event criar cena em Javascript para 
+verificar se o user quer mesmo apagar o evento
+
+comments: ainda dá para o pessoal enfiar lá scripts
 
 Questoes:
 
