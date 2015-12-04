@@ -72,5 +72,5 @@
 		$stmt3->execute(array($_SESSION['username'] . "-" . strip_tags($_FILES['fileToUpload']['name']), $_POST['id_event']));
 	}
 	
-	header('Location: events.php');	//redirecionar para home 
+	header('Location: see_my_events.php');	//redirecionar para home 
 ?>

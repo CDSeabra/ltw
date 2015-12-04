@@ -53,6 +53,19 @@
     return $result;
   }
   
+  function checkEventsOwner($id_event, $id_user) {
+	global $db;
+	
+	$stmt = $db->prepare('SELECT id_user FROM events_users WHERE id_host = id_user AND id_event = ? AND id_user = ?');
+	$stmt->execute(array($id_event, $id_user));  
+	$result = $stmt->fetch();
+	
+	if(!empty($result))
+		return true;
+	else
+		return false;
+  }
+  
   /*
   function updateEventsItem($id, $title, $introduction, $fulltext) {
     global $db;

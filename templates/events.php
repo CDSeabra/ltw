@@ -3,9 +3,11 @@
 		?>
 		<div class="single-event">
 			<ul>
-			  <li><a href="">Join</a></li>
-			  <li><a href="single_event.php?id=<?=$row['id_event']?>">See More</a></li>
-			  <li><a href="">Share</a></li>
+				<? if(isset($_SESSION['username']) && !checkEventsOwner($row['id_event'], $id_user)){?>
+				<li><a href="">Join</a></li>
+				<?}?>
+				<li><a href="single_event.php?id=<?=$row['id_event']?>">See More</a></li>
+				<li><a href="">Share</a></li>
 			</ul>
 			<h3><a href="single_event.php?id=<?=$row['id_event']?>">Event's name: <?= $row['name'] ?></a></h3> <br>
 			<? $image_name = getImage($row['id_event']); ?>

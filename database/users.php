@@ -27,4 +27,13 @@
 		$array = $array["username"];
 		return implode("", (array)$array);
 	}
+	
+	function getUserId($session_username) {
+		global $db;
+		$stmt = $db->prepare('SELECT id_user FROM users WHERE username = ?');
+		$stmt->execute(array($session_username));
+		$id_user = $stmt->fetch()[0];
+		
+		return $id_user;
+	}
 ?>

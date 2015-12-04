@@ -10,7 +10,7 @@
 	$id_event = $_GET['id'];
 	$id_user = $stmt1->fetch();
 	$id_user = $id_user["id_user"];
-	$texto = $_POST['comment_text'];
+	$texto = htmlspecialchars($_POST['comment_text']);
 	
 	$stmt = $db->prepare('INSERT INTO comments VALUES (NULL, ?, ?, ?)');
 	$stmt->execute(array($id_event, $id_user, $texto));

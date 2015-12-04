@@ -18,8 +18,8 @@
 			<?php } ?>
 			<? if (isset($_SESSION['username'])){?>
 			<form id="commentform" action="action_comment.php?id=<?=$result['id_event']?>" method="post">
-			<textarea id="commenttext" rows="4" cols="100" name="comment_text" placeholder="Your Comment Goes Here!"></textarea>
-			<input id="commentbutton" type="submit" name="comment" value="Comment!"></form>
+				<textarea id="commenttext" rows="4" cols="100" name="comment_text" placeholder="Your Comment Goes Here!"></textarea>
+				<input id="commentbutton" type="submit" name="comment" value="Comment!"></form>
 			<?} ?>
 		</div>
 	</div>

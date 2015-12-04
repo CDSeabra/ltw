@@ -12,7 +12,9 @@ Relacionado: aceitar convites; convidar pessoas
 action_delete_event criar cena em Javascript para 
 verificar se o user quer mesmo apagar o evento
 
-comments: ainda dá para o pessoal enfiar lá scripts
+comments: ainda dá para o pessoal enfiar lá scripts ==> penso que já está
+
+Eventos têm que dizer quantos users vão/não vão ao evento e ver quem.
 
 Questoes:
 
