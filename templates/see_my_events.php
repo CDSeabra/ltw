@@ -4,6 +4,7 @@
 		<div class="single-event">
 			<ul>
 				<li><a href="edit_event.php?id_event=<?=$row['id_event']?>">Edit event</a></li>
+				<li><a href="invite_users.php?id_event=<?=$row['id_event']?>">Invite</a></li>
 				<li><a href="">Share</a></li>
 				<li><a href="action_delete_event.php?id_event=<?=$row['id_event']?>">Delete Event</a></li>
 			</ul>	

@@ -36,4 +36,13 @@
 		
 		return $id_user;
 	}
+	
+	function getAllUsers(){
+		global $db;
+
+		$stmt = $db->prepare('SELECT username FROM users');
+		$stmt->execute();  
+
+		return $stmt->fetchAll();
+	}
 ?>

@@ -6,22 +6,24 @@
 	$password = strip_tags($_POST['password']);
 	
 	if (usernameExists($username)){ // test if user exists
+		$id_user = getUserId($username);
 		if($_POST['login'] && userExists($username, $password)) {
 			$_SESSION['username'] = $username;            // store the username
+			$_SESSION['id_user'] = $id_user;
 		}
 		else
-			/*ERRO: User já existe*/
 			$_SESSION['error_messages'][] = "Error: combination of username and password is wrong";
 		}
 	else{														//user doesn't exist
 		if(isset($_POST['register'])) {
 			/*regista*/
 			$stmt = $db->prepare('INSERT INTO users VALUES (NULL, ?, ?)');
-			$stmt->execute(array($username, sha1($password)));  
+			$stmt->execute(array($username, sha1($password)));
+			$id_user = getUserId($username);
 			$_SESSION['username'] = $username;
+			$_SESSION['id_user'] = $id_user;
 		}
 		else {
-			/*ERRO: user não existe*/
 			$_SESSION['error_messages'][] = "Error: combination of username and password is wrong";
 		}
 	}
