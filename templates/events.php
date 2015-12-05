@@ -14,7 +14,9 @@
 			<img src="images/<?="$image_name"?>" alt="Event's photo">
 			<span class="type">Type: <?=$row['tipo']?></span><br>
 			<span>Description: <?=$row['description']?></span><br>
+			<span>Place: <?=$row['place']?> </span><br>
 			<span>Date: <?=$row['dat']?></span><br>
+			<span>Time: <?=$row['time_init']?></span><br>
 			<span>Privacy: <? if($row['privado'] == 'true') echo 'Private'; else echo 'Public' ;?></span>
 			
 			<!-- GOD'S GIFT -->

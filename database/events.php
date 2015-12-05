@@ -8,7 +8,7 @@
 		SELECT * FROM events WHERE privado = ?
 		UNION ALL
 		
-		SELECT events.id_event, name, dat, description, tipo, privado
+		SELECT events.id_event, name, dat, description, tipo, place, time_init, time_end, privado
 		FROM events, users, events_users 
 		WHERE privado = ? AND users.id_user = (SELECT id_user FROM users WHERE username = ?) AND (users.id_user = events_users.id_user OR users.id_user = events_users.id_host)
 		AND events.id_event = events_users.id_event');

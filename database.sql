@@ -1,23 +1,26 @@
 CREATE TABLE users (
   id_user INTEGER PRIMARY KEY AUTOINCREMENT,
-  username VARCHAR UNIQUE,
-  password VARCHAR
+  username TEXT UNIQUE,
+  password TEXT
 );
 
 CREATE TABLE events (
 	id_event INTEGER PRIMARY KEY AUTOINCREMENT,
-	name VARCHAR NOT NULL,
-	dat VARCHAR NOT NULL,
+	name TEXT NOT NULL,
+	dat TEXT NOT NULL,
 	description TEXT,
-	tipo VARCHAR NOT NULL,
-	privado VARCHAR
+	tipo TEXT NOT NULL,
+	place TEXT NOT NULL,
+	time_init TEXT NOT NULL,  
+	time_end TEXT NOT NULL,
+	privado TEXT
 );
 
 CREATE TABLE events_users (
 	id_host INTEGER REFERENCES users,
 	id_event INTEGER REFERENCES events,
 	id_user INTEGER REFERENCES users, 
-	status VARCHAR
+	status TEXT
 );
 
 create table comments (
@@ -29,6 +32,6 @@ create table comments (
 
 create table images (
 	id_imagem INTEGER PRIMARY KEY AUTOINCREMENT,
-	id_event REFERENCES events,
-	name VARCHAR NOT NULL	
+	id_event INTEGER REFERENCES events,
+	name TEXT NOT NULL	
 );

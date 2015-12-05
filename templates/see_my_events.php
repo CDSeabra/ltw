@@ -13,7 +13,9 @@
 			<? $image_name = getImage($row['id_event']); ?>
 			<img src="images/<?="$image_name"?>" alt="Event's photo">
 			<p>Description: <?=$row['description']?></p>
+			<span>Place: <?=$row['place']?> </span><br>
 			<p>Date: <?=$row['dat']?></p>
+			<span>Time: <?=$row['time_init']?></span><br>
 			<p id="seeeventsprivacy">Privacy: <? if($row['privado'] == 'true') echo 'Private'; else echo 'Public' ;?></p>
 			
 			<!-- GOD'S GIFT -->
