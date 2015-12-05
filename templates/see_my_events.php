@@ -15,10 +15,10 @@
 			<span class="type">Type: <?=$row['tipo']?></span> <br>
 			<span>Description: <?=$row['description']?></span> <br>
 			<span>Place: <?=$row['place']?> </span><br>
-			<p>Date: <?=$row['dat']?></p>
+			<span>Date: <?=$row['dat']?></span>
 			<span>Initial time: <?=$row['time_init']?></span><br>
 			<span>Final time: <?=$row['time_end']?></span><br>
-			<p id="seeeventsprivacy">Privacy: <? if($row['privado'] == 'true') echo 'Private'; else echo 'Public' ;?></p>
+			<span id="seeeventsprivacy">Privacy: <? if($row['privado'] == 'true') echo 'Private'; else echo 'Public' ;?></span>
 			</p>
 			<!-- GOD'S GIFT -->
 			<div style="clear: both"></div>
