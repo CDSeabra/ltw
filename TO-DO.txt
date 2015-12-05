@@ -1,16 +1,13 @@
-Profile(?)
 
 Fazer o Search --> M
 
-AJEITAR O CSS PARA TUDO --> nitidamente, Abrótea
+AJEITAR O CSS PARA TUDO --> nitidamente, Abrótea  --> arranjar os links com imagens de visto e cruz para a sidebar
 
-Sidebar com links dos eventos que foi convidado mas nao aceitou/recusou,
-com botões e checkboxes para usar JQUERY ao aceitar/recusar
+Sidebar com query correcta
 
-action_delete_event criar cena em Javascript para 
-verificar se o user quer mesmo apagar o evento
+Sidebar com links dos eventos para usar JQUERY ao aceitar/recusar
 
-Eventos têm que dizer quantos users vão/não vão ao evento e ver quem.
+Eventos têm que dizer quantos users vão/não vão ao evento e ver quem???
 -----------------------------------------------------------------------------
 Bugs:
 
@@ -19,3 +16,5 @@ Não dá para selecionar texto nos single events porque...? lelwhat.png
 Questoes:
 
 ALL HAIL CHIX QUE NOS VAI DIZER COMO FAZER O SEARCH
+
+
