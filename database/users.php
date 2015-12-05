@@ -45,4 +45,18 @@
 
 		return $stmt->fetchAll();
 	}
+	
+	function getHost($id_event){
+		global $db;
+		$stmt = $db->prepare('SELECT id_host FROM events_users WHERE id_event = ?');
+		$stmt->execute(array($id_event));
+		
+		$id = $stmt->fetch()[0];	
+		
+		$stmt1 = $db->prepare('SELECT username FROM users WHERE id_user = ?');
+		$stmt1->execute(array($id));
+		
+		$username = $stmt1->fetch()[0];		
+		return $username;
+	}
 ?>

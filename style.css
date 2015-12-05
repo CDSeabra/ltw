@@ -209,6 +209,25 @@ a{
   display: block;
 }
 
+#sidebar p{
+  color: #ffffff;
+  text-decoration: none;
+  font-family: Coolvetica;
+  width: 60%;
+  margin-left: 20%;
+}
+ 
+#sidebar p {
+  list-style-type: none;
+  text-align: center;
+  border: ridge;
+}
+ 
+#sidebar p{
+  width: 0px auto;
+  display: block;
+}
+
 #footer {
 	padding-left: 2em;
 	padding-right: 2em;
@@ -265,6 +284,15 @@ a{
     width:80%;
 	position:relative;	
 	left: 20%;
+}
+
+.event_single span {
+	display: block;
+	overflow: hidden;
+}
+
+.event_single p {
+	margin-left: 20%;
 }
 
 #comments {

@@ -45,6 +45,7 @@
 		<div id= "container2">
 		<div id= "container">
 		<div id="sidebar">
+		<p> Pending Invites </p>
 		<?php foreach( $result as $row) {  ?>
 			 <a href="single_event.php?id=<?=$row['id_event']?>"><?= $row['name'] ?></a>
 		<?php } ?>    

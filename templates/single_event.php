@@ -2,10 +2,13 @@
 			<h3>Event's name: <?= $result['name'] ?></h3> <br>
 			<? $image_name = getImage($result['id_event']); ?>
 			<img src="images/<?="$image_name"?>" alt="Event's photo">
+			<p>
 			<span class="type">Type: <?=$result['tipo']?></span><br>
 			<span>Description: <?=$result['description']?></span><br>
 			<span>Date: <?=$result['dat']?></span><br>
-			<span>Privacy: <? if($result['privado'] == 'true') echo 'Private'; else echo 'Public' ;?></span>
+			<span>Privacy: <? if($result['privado'] == 'true') echo 'Private'; else echo 'Public' ;?></span><br>
+			<span>Host: <?= getHost($result['id_event']); ?></span>
+			</p>
 		</div>
 		
 		<div id="comments">
