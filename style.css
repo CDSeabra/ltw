@@ -129,13 +129,15 @@ a{
 
 .single-event > img {
 	float: left;
-	margin: 10px 10px 10px 10px;
+	margin: 40px 10px 10px 10px;
 	display: block;
     max-width:100px;
     max-height:90px;
     width: auto;
     height: auto;
 }
+
+
 
 .event_single > img {
 	float: left;
@@ -149,19 +151,23 @@ a{
 
 .single-event {
 	border-right-style: solid;
-	border-top-style:solid;
+	border-top-style:solid;	
 	padding-left: 1em;
 	padding-right: 1em;
 }
 
 .event_single {
-	padding-bottom: 50px;
 	border-bottom-style: solid;
 	border-top-style: solid;
 }
 
-.single-event:last-child {
+.event:last-child {
 	border-bottom-style: solid;
+}
+
+.single-event p{
+	margin-bottom: 0px;
+	padding-bottom: 10px;
 }
 
 .single-event ul li { 
@@ -287,11 +293,10 @@ a{
 }
 
 .event_single span {
-	display: block;
 	overflow: hidden;
 }
 
-.event_single p {
+.event_single p, .event p, .single-event p{
 	margin-left: 20%;
 }
 
