@@ -61,6 +61,16 @@
 		return $username;
 	}
 	
+	function getHostId($id_event){
+		global $db;
+		$stmt = $db->prepare('SELECT id_host FROM events_users WHERE id_event = ?');
+		$stmt->execute(array($id_event));
+		
+		$id = $stmt->fetch()[0];
+		
+		return $id;
+	}
+	
 	function getNotInvitedUsers($id){
 		global $db;
 
@@ -69,5 +79,13 @@
 		$stmt->execute(array($id));  
 
 		return $stmt->fetchAll();
+	}
+	
+	function getStatusByIdUser($id, $id_event){
+		global $db;
+		$stmt = $db->prepare('SELECT status FROM events_users WHERE id_user = ? AND id_event = ?');
+		$stmt->execute(array($id, $id_event));
+		$status = $stmt->fetch()["status"];
+		return $status;
 	}
 ?>

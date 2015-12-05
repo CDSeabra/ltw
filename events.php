@@ -8,6 +8,7 @@
 	} else {
 		$result = getAllEvents(false);
 	}
+	
 	if(isset($_SESSION['username']))
 		$id_user = getUserId($_SESSION['username']);
 	
