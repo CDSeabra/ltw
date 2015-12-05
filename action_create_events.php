@@ -3,9 +3,13 @@
 	include_once('database/users.php'); 
 	include_once('database/events.php');
 
+	//insert into events
+	$stmt = $db->prepare('INSERT INTO events VALUES (NULL, ?, ?, ?, ?, ?, ?, ?, ?)');
+	$stmt->execute(array(strip_tags($_POST['event_name']), strip_tags($_POST['event_date']), strip_tags($_POST['event_description']), strip_tags($_POST['event_type']), strip_tags($_POST['event_place']), strip_tags($_POST['event_start_time']), strip_tags($_POST['event_end_time']), strip_tags($_POST['private'])));  
+	
 	//==========================================================================================
 	$target_dir = "images/";
-	$target_file = $target_dir . $_SESSION['username'] . "-" . basename(strip_tags($_FILES["fileToUpload"]["name"]));
+	$target_file = $target_dir . strip_tags($_POST['id_event']) . "-" . basename(strip_tags($_FILES["fileToUpload"]["name"]));
 	$uploadOk = 1;
 	$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 	// Check if image file is a actual image or fake image
@@ -47,16 +51,12 @@
 	}
 	//==========================================================================================
 	
-	//insert into events
-	$stmt = $db->prepare('INSERT INTO events VALUES (NULL, ?, ?, ?, ?, ?, ?, ?, ?)');
-	$stmt->execute(array(strip_tags($_POST['event_name']), strip_tags($_POST['event_date']), strip_tags($_POST['event_description']), strip_tags($_POST['event_type']), strip_tags($_POST['event_place']), strip_tags($_POST['event_start_time']), strip_tags($_POST['event_end_time']), strip_tags($_POST['private'])));  
-	
 	//insert into imagens
 	$last_id = $db->lastInsertId();
 	$stmt2 = $db->prepare('INSERT INTO images VALUES (NULL, ? , ?)');
 	echo "file: ". $_FILES['fileToUpload']['name'];
 	echo "id: " . $last_id;
-	$stmt2->execute(array( intval($last_id), $_SESSION['username'] . "-" . strip_tags($_FILES['fileToUpload']['name'])));
+	$stmt2->execute(array( intval($last_id), strip_tags($_POST['id_event']) . "-" . strip_tags($_FILES['fileToUpload']['name'])));
 	
 	//insert into events_users
 	$stmt3 = $db->prepare('INSERT INTO events_users VALUES ((SELECT id_user FROM users WHERE username = ?),?,(SELECT id_user FROM users WHERE username = ?),?)');

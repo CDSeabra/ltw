@@ -58,14 +58,14 @@
 	//==========================================================================================
 	
 	//insert into events
-	$stmt2 = $db->prepare('UPDATE events SET name = ?, dat = ?, description = ?, tipo = ?, privado = ? WHERE id_event = ?');
-	$stmt2->execute(array(strip_tags($_POST['event_name']), strip_tags($_POST['event_date']), strip_tags($_POST['event_description']), strip_tags($_POST['event_type']), strip_tags($_POST['private']), $_POST['id_event']));  
+	$stmt2 = $db->prepare('UPDATE events SET name = ?, dat = ?, description = ?, tipo = ?, place = ?, time_init = ?, time_end = ?, privado = ? WHERE id_event = ?');
+	$stmt2->execute(array(strip_tags($_POST['event_name']), strip_tags($_POST['event_date']), strip_tags($_POST['event_description']), strip_tags($_POST['event_type']), strip_tags($_POST['event_place']), strip_tags($_POST['event_start_time']), strip_tags($_POST['event_end_time']), strip_tags($_POST['private']), $_POST['id_event']));  
 	
 	//insert into imagens
 	if(!empty($_FILES["fileToUpload"])){
 		$last_id = $db->lastInsertId();
 		$stmt3 = $db->prepare('UPDATE images SET name = ? WHERE id_event = ?');
-		$stmt3->execute(array($_POST['id_event'] . "-" . strip_tags($_FILES['fileToUpload']['name']), $_POST['id_event']));
+		$stmt3->execute(array(strip_tags($_POST['id_event']) . "-" . strip_tags($_FILES['fileToUpload']['name']), $_POST['id_event']));
 	}
 	
 	header('Location: see_my_events.php');	//redirecionar para home 
