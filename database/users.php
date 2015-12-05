@@ -46,6 +46,7 @@
 		return $stmt->fetchAll();
 	}
 	
+
 	function getHost($id_event){
 		global $db;
 		$stmt = $db->prepare('SELECT id_host FROM events_users WHERE id_event = ?');
@@ -58,5 +59,15 @@
 		
 		$username = $stmt1->fetch()[0];		
 		return $username;
+	}
+	
+	function getNotInvitedUsers($id){
+		global $db;
+
+		$stmt = $db->prepare('SELECT username FROM users WHERE id_user NOT IN (
+		SELECT users.id_user FROM events_users, users WHERE users.id_user = events_users.id_user AND events_users.id_event = ? )');
+		$stmt->execute(array($id));  
+
+		return $stmt->fetchAll();
 	}
 ?>

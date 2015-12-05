@@ -3,10 +3,8 @@
 	include_once "database/events.php";
 	include_once "database/users.php";
 
-	if(isset($_SESSION['username'])) {
-		$result = getAllUsers();
-	} else {
-		$result = getAllUsers();
+	if(isset($_SESSION['id_user']) &&  isset($_GET['id_event'])) {
+		$result = getNotInvitedUsers($_GET['id_event']);
 	}
 	
 	include "templates/header.php";
