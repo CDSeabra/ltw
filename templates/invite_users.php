@@ -5,7 +5,7 @@
 			<?php foreach( $result as $row) {
 				if($row['username'] != $_SESSION['username']) {?>
 			<div class="single-event">
-				<input type="checkbox" name="invitation" value="<?=$row['username']?>"><?=$row['username']?><br>
+				<input type="checkbox" name="invitation[]" value="<?=getUserId($row['username'])?>"><?=$row['username']?><br>
 			</div>
 				<?php }} ?>
 			<input type="submit" value="Invite!">			 

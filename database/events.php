@@ -26,9 +26,8 @@
   function getMyEvents() {
 	global $db;
 	
-    $stmt = $db->prepare('SELECT * FROM events, events_users WHERE events_users.id_event = events.id_event AND events_users.id_host = (
-	SELECT id_user FROM users WHERE username = ?)');
-    $stmt->execute(array($_SESSION['username']));
+    $stmt = $db->prepare('SELECT * FROM events, events_users WHERE events_users.id_event = events.id_event AND events_users.id_host = ? AND events_users.status = ?');
+    $stmt->execute(array($_SESSION['id_user'], 'owner'));
 
     return $stmt->fetchAll();
   }
