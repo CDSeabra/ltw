@@ -5,7 +5,9 @@
 			<p>
 			<span class="type">Type: <?=$result['tipo']?></span><br>
 			<span>Description: <?=$result['description']?></span><br>
+			<span>Place: <?=$result['place']?> </span><br>
 			<span>Date: <?=$result['dat']?></span><br>
+			<span>Time: <?=$result['time_init']?></span><br>
 			<span>Privacy: <? if($result['privado'] == 'true') echo 'Private'; else echo 'Public' ;?></span><br>
 			<span>Host: <?= getHost($result['id_event']); ?></span>
 			</p>

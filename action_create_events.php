@@ -48,8 +48,8 @@
 	//==========================================================================================
 	
 	//insert into events
-	$stmt = $db->prepare('INSERT INTO events VALUES (NULL, ?, ?, ?, ?, ?)');
-	$stmt->execute(array(strip_tags($_POST['event_name']), strip_tags($_POST['event_date']), strip_tags($_POST['event_description']), strip_tags($_POST['event_type']), strip_tags($_POST['private'])));  
+	$stmt = $db->prepare('INSERT INTO events VALUES (NULL, ?, ?, ?, ?, ?, ?, ?, ?)');
+	$stmt->execute(array(strip_tags($_POST['event_name']), strip_tags($_POST['event_date']), strip_tags($_POST['event_description']), strip_tags($_POST['event_type']), strip_tags($_POST['event_place']), strip_tags($_POST['event_start_time']), strip_tags($_POST['event_end_time']), strip_tags($_POST['private'])));  
 	
 	//insert into imagens
 	$last_id = $db->lastInsertId();
