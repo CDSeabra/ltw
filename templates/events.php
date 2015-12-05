@@ -3,11 +3,15 @@
 		?>
 		<div class="single-event">
 			<ul>
-				<? if(isset($_SESSION['username']) && !checkEventsOwner($row['id_event'], $id_user)){?>
-				<li><a href="">Join</a></li>
-				<?}?>
 				<li><a href="single_event.php?id=<?=$row['id_event']?>">See More</a></li>
-				<li><a href="">Share</a></li>
+				<? if(isset($_SESSION['username']) && ($row['id_event'] != $_SESSION['id_user']) && (getStatusByIdUser($_SESSION['id_user'], $row['id_event']) == 'invited')){?>
+				<li><a href="action_joins.php?status=Going&id_event=<?=$row['id_event']?>">Going</a></li>
+				<li><a href="action_joins.php?status=Not%20going&id_event=<?=$row['id_event']?>">Not going</a></li>
+				<?} else if(isset($_SESSION['username']) && getStatusByIdUser($_SESSION['id_user'], $row['id_event']) == 'Not going'){?>
+				<li><a href="action_joins.php?status=Going&id_event=<?=$row['id_event']?>">Going</a></li>
+				<?} else if(isset($_SESSION['username']) && getStatusByIdUser($_SESSION['id_user'], $row['id_event']) == 'Going'){?>
+				<li><a href="action_joins.php?status=Not%20going&id_event=<?=$row['id_event']?>">Not going</a></li>
+				<?}?>
 			</ul>
 			<h3><a href="single_event.php?id=<?=$row['id_event']?>">Event's name: <?= $row['name'] ?></a></h3>
 			<? $image_name = getImage($row['id_event']); ?>
