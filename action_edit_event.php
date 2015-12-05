@@ -6,12 +6,8 @@
 	//==========================================================================================
 	
 	if(!empty($_FILES["fileToUpload"])){
-		//$stmt0 = $db->prepare('SELECT id_user FROM users WHERE username = ?');
-		//$stmt0->execute(array($_SESSION['username']));
-		//$id_user = $stmt0->fetch()[0];
-		
 		$target_dir = "images/";
-		$target_file = $target_dir . $_SESSION['username'] . "-" . basename(strip_tags($_FILES["fileToUpload"]["name"]));
+		$target_file = $target_dir . $_POST['id_event'] . "-" . basename(strip_tags($_FILES["fileToUpload"]["name"]));
 		$uploadOk = 1;
 		$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 		// Check if image file is a actual image or fake image
@@ -69,7 +65,7 @@
 	if(!empty($_FILES["fileToUpload"])){
 		$last_id = $db->lastInsertId();
 		$stmt3 = $db->prepare('UPDATE images SET name = ? WHERE id_event = ?');
-		$stmt3->execute(array($_SESSION['username'] . "-" . strip_tags($_FILES['fileToUpload']['name']), $_POST['id_event']));
+		$stmt3->execute(array($_POST['id_event'] . "-" . strip_tags($_FILES['fileToUpload']['name']), $_POST['id_event']));
 	}
 	
 	header('Location: see_my_events.php');	//redirecionar para home 
