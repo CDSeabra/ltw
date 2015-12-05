@@ -30,10 +30,12 @@
 			<h2>The best manager in the world (well...)</h2>
 		</div>
 		<div id="menu">
-			<ul><?php if (isset($_SESSION['username'])){?>
+			<ul>
+				<li><a href="events.php">Home</a></li>
+				<?php if (isset($_SESSION['username'])){?>
 				<li><a href="create_events.php">Create Event</a></li>
 				<li><a href="see_my_events.php">See My Events</a></li>
-				<li><a href="">See Invitations</a></li>
+				<li><a href="see_invitations.php">See Invitations</a></li>
 			<?}?>
 				<li><form id="searchbar" action="search.php" method="get">
 					<input type="text" name="search" placeholder="Search" required style="width: 150px;"></input>
