@@ -15,7 +15,8 @@
 			<p>Description: <?=$row['description']?></p>
 			<span>Place: <?=$row['place']?> </span><br>
 			<p>Date: <?=$row['dat']?></p>
-			<span>Time: <?=$row['time_init']?></span><br>
+			<span>Initial time: <?=$row['time_init']?></span><br>
+			<span>Final time: <?=$row['time_end']?></span><br>
 			<p id="seeeventsprivacy">Privacy: <? if($row['privado'] == 'true') echo 'Private'; else echo 'Public' ;?></p>
 			
 			<!-- GOD'S GIFT -->

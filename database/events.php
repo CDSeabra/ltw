@@ -65,13 +65,12 @@
 		return false;
   }
   
-  /*
-  function updateEventsItem($id, $title, $introduction, $fulltext) {
-    global $db;
-    
-    $stmt = $db->prepare('UPDATE news SET title = ?, introduction = ?, fulltext = ? WHERE id = ?');
-    $stmt->execute(array($title, $introduction, $fulltext, $id));  
+  function getInvitedEvents() {
+	global $db;
 
-    return $stmt->fetch();
-  }*/
+	$stmt = $db->prepare('SELECT * FROM events, events_users WHERE events_users.id_event = events.id_event AND events_users.id_user = ? AND events_users.status != ?');
+	$stmt->execute(array($_SESSION['id_user'], 'owner'));
+
+	return $stmt->fetchAll();
+  }
 ?>
