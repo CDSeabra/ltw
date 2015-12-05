@@ -7,8 +7,6 @@ AJEITAR O CSS PARA TUDO --> nitidamente, Abrótea
 Sidebar com links dos eventos que foi convidado mas nao aceitou/recusou,
 com botões e checkboxes para usar JQUERY ao aceitar/recusar
 
-Relacionado: aceitar convites; convidar pessoas
-
 action_delete_event criar cena em Javascript para 
 verificar se o user quer mesmo apagar o evento
 
