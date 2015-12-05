@@ -1,5 +1,5 @@
 		<div class="event_single">
-			<h3>Event's name: <?= $result['name'] ?></h3> <br>
+			<h3>Event's name: <?= $result['name'] ?></h3>
 			<? $image_name = getImage($result['id_event']); ?>
 			<img src="images/<?="$image_name"?>" alt="Event's photo">
 			<p>
