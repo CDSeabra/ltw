@@ -5,6 +5,7 @@
 
 	if(isset($_SESSION['id_user']) &&  isset($_GET['id_event'])) {
 		$result = getNotInvitedUsers($_GET['id_event']);
+		$invitations = getPendingInvites();
 	}
 	
 	include "templates/header.php";

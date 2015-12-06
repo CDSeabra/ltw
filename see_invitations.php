@@ -5,7 +5,9 @@
 
 	if(isset($_SESSION['username'])) {
 		$result = getInvitedEvents();
+		$invitations = getPendingInvites();
 	}	
+	
 	
 	include "templates/header.php";
 	include "templates/see_invitations.php";

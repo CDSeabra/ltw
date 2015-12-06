@@ -73,4 +73,13 @@
 
 	return $stmt->fetchAll();
   }
+  
+  function getPendingInvites() {
+	global $db;
+	  
+	$stmt = $db->prepare('SELECT * FROM events, events_users WHERE events_users.id_event = events.id_event AND events_users.id_user = ? AND events_users.status = ?');
+	$stmt->execute(array($_SESSION['id_user'], 'invited'));
+
+	return $stmt->fetchAll();
+  }
 ?>

@@ -1,11 +1,11 @@
   <div class="event">
     <?php foreach( $result as $row) {
-		?>
+		$delete = "action_delete_event.php?id_event=".$row['id_event'];?>
 		<div class="single-event">
 			<ul>
 				<li><a href="edit_event.php?id_event=<?=$row['id_event']?>">Edit event</a></li>
 				<li><a href="invite_users.php?id_event=<?=$row['id_event']?>">Invite</a></li>
-				<li><a href="action_delete_event.php?id_event=<?=$row['id_event']?>" onclick="confirmDelete()">Delete Event</a></li>
+				<li><a href="<?=$delete?>" onclick="if(!confirmDelete()) return false;">Delete Event</a></li>
 			</ul>	
 			<h3>Event's name: <?= $row['name'] ?></h3>
 			

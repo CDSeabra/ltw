@@ -6,6 +6,7 @@
 
 	if(isset($_SESSION['username'])) {
 		$result = getAllEvents(true);
+		$invitations = getPendingInvites();
 	} else {
 		$result = getAllEvents(false);
 	}

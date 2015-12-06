@@ -1,15 +1,17 @@
   <div class="event">
-    <?php foreach( $result as $row) {
-		?>
+    <?php foreach( $result as $row) {?>
 		<div class="single-event">
 			<ul>
 				<li><a href="single_event.php?id=<?=$row['id_event']?>">See More</a></li>
-				<? if(isset($_SESSION['username']) && ($row['id_event'] != $_SESSION['id_user']) && (getStatusByIdUser($_SESSION['id_user'], $row['id_event']) == 'invited')){?>
+				<? if(isset($_SESSION['username']) && (getHostId($row['id_event']) != $_SESSION['id_user']) && (getStatusByIdUser($_SESSION['id_user'], $row['id_event']) == 'invited')){?>
 				<li><a href="action_joins.php?status=Going&id_event=<?=$row['id_event']?>">Going</a></li>
 				<li><a href="action_joins.php?status=Not%20going&id_event=<?=$row['id_event']?>">Not going</a></li>
-				<?} else if(isset($_SESSION['username']) && getStatusByIdUser($_SESSION['id_user'], $row['id_event']) == 'Not going'){?>
+				<?} else if(isset($_SESSION['username']) && (getHostId($row['id_event']) != $_SESSION['id_user']) && (getStatusByIdUser($_SESSION['id_user'], $row['id_event']) == 'Not going')){?>
 				<li><a href="action_joins.php?status=Going&id_event=<?=$row['id_event']?>">Going</a></li>
-				<?} else if(isset($_SESSION['username']) && getStatusByIdUser($_SESSION['id_user'], $row['id_event']) == 'Going'){?>
+				<?} else if(isset($_SESSION['username']) && (getHostId($row['id_event']) != $_SESSION['id_user']) && (getStatusByIdUser($_SESSION['id_user'], $row['id_event']) == 'Going')){?>
+				<li><a href="action_joins.php?status=Not%20going&id_event=<?=$row['id_event']?>">Not going</a></li>
+				<?} else if(isset($_SESSION['username']) && (getHostId($row['id_event']) != $_SESSION['id_user']) && ($row['privado'] == 'false')){?>
+				<li><a href="action_joins.php?status=Going&id_event=<?=$row['id_event']?>">Going</a></li>
 				<li><a href="action_joins.php?status=Not%20going&id_event=<?=$row['id_event']?>">Not going</a></li>
 				<?}?>
 			</ul>
@@ -28,7 +30,7 @@
 			<!-- GOD'S GIFT -->
 			<div style="clear: both"></div>
 		</div>
-	<?php } ?>    
+	<?php } ?>
   </div>
   </div>
   </div>

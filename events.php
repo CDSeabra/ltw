@@ -5,12 +5,11 @@
 
 	if(isset($_SESSION['username'])) {
 		$result = getAllEvents(true);
+		$id_user = getUserId($_SESSION['username']);
+		$invitations = getPendingInvites();
 	} else {
 		$result = getAllEvents(false);
 	}
-	
-	if(isset($_SESSION['username']))
-		$id_user = getUserId($_SESSION['username']);
 	
 	
 	include "templates/header.php";

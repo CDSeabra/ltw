@@ -8,6 +8,12 @@
 	
 	$stmt = $db->prepare('DELETE FROM events WHERE id_event = ?');
 	$stmt->execute(array($_GET['id_event']));
+	
+	$stmt2 = $db->prepare('DELETE FROM events_users WHERE id_event = ?');
+	$stmt2->execute(array($_GET['id_event']));
+	
+	$stmt3 = $db->prepare('DELETE FROM images WHERE id_event = ?');
+	$stmt3->execute(array($_GET['id_event']));
 
 	
 	header('Location: see_my_events.php');
