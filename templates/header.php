@@ -54,7 +54,6 @@
 				<input type="hidden" name="id_event" value="<?=$invite['id_event']?>">
 				<button type="submit" name="notgoing" style="border: 0; background: transparent"><img src="bin/uncheck.png" width="15" height="15" alt="submit" /> </button> 
 				<button type="submit" name="going" style="border: 0; background: transparent"><img src="bin/check.png" width="15" height="15" alt="submit" /> </button>		
-				
 			</form>
 		<?php }} ?>    
 		</div>

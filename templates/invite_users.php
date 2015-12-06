@@ -4,11 +4,11 @@
 			<input type="hidden" name="id_event" value="<?=$_GET['id_event']?>"/>
 			<?php foreach( $result as $row) {
 				if($row['username'] != $_SESSION['username']) {?>
-			<div class="single-event">
+			<div class="name">
 				<input type="checkbox" name="invitation[]" value="<?=getUserId($row['username'])?>"><?=$row['username']?><br>
 			</div>
 				<?php }} ?>
-			<input type="submit" value="Invite!">			 
+			<input id="submitinvite"type="submit" value="Invite!">			 
 		</form>
 	</div>
 </div>

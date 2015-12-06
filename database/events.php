@@ -6,7 +6,7 @@
 	if($loggedin){
 		$stmt = $db->prepare('
 		SELECT * FROM events WHERE privado = ?
-		UNION ALL
+		UNION
 		
 		SELECT events.id_event, name, dat, description, tipo, place, time_init, time_end, privado
 		FROM events, users, events_users 

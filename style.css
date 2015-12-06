@@ -20,33 +20,8 @@ a{
 }
 
 @font-face {
-    font-family: NouvelleVague;
-    src: url(bin/nouvelle_vague_final.ttf);
-}
-
-@font-face {
-    font-family: Bakery;
-    src: url(bin/bakery.ttf);
-}
-
-@font-face {
     font-family: Coolvetica;
     src: url(bin/coolvetica.ttf);
-}
-
-@font-face {
-    font-family: ChronicDelivery;
-    src: url(bin/ChronicDelivery.ttf);
-}
-
-@font-face {
-    font-family: MrSunshine;
-    src: url(bin/MrSunshine.ttf);
-}
-
-@font-face {
-    font-family: OldEurope;
-    src: url(bin/OldEurope.ttf);
 }
 
 @font-face {
@@ -121,6 +96,14 @@ a{
 	max-width: 500px;
 	font-family: Coolvetica;
 	margin-left: 20px;
+	margin-top: 5px;
+}
+
+.event_single  > h4 {
+	font-size: 1.2em;
+	max-width: 500px;
+	font-family: Coolvetica;
+	margin-left: 20px;
 }
 
 .type {
@@ -129,7 +112,7 @@ a{
 
 .single-event > img {
 	float: left;
-	margin: 40px 10px 10px 10px;
+	margin: 10px 10px 10px 10px;
 	display: block;
     max-width:100px;
     max-height:90px;
@@ -141,7 +124,7 @@ a{
 
 .event_single > img {
 	float: left;
-	margin: 10px 10px 10px 10px;
+	margin: 0px 10px 10px 20px;
 	display: block;
     max-width:100px;
     max-height:90px;
@@ -293,11 +276,33 @@ a{
 }
 
 .event_single span {
+	margin-right: 5%;
+	overflow: hidden;
+}
+
+.single-event span {
+	margin-right: 5%;
 	overflow: hidden;
 }
 
 .event_single p, .event p, .single-event p{
 	margin-left: 20%;
+}
+
+#going {
+	float:right;
+	font-family: Coolvetica;
+	height: 18px;
+	margin-right: 10px;
+	color: black;
+	
+}
+
+#going:visited {
+	color: black;
+}
+
+#description {
 }
 
 #comments {
@@ -373,4 +378,20 @@ a{
 	float: right;
 	padding-bottom: 0px;
 	padding-top: 0px;
+}
+
+.event h3 {
+	margin-left: 2%;
+	font-family: Coolvetica;
+}
+
+#submitinvite {
+	margin-top: 10px;
+	margin-bottom: 5px;
+	margin-left: 5px;
+}
+
+.name {
+	margin-left: 5px;
+	margin-bottom: 5px;
 }
