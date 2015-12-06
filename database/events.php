@@ -82,4 +82,24 @@
 
 	return $stmt->fetchAll();
   }
+  
+  function getGoing($id){
+	global $db;
+	  
+	$stmt1 = $db->prepare('SELECT username FROM events_users, users
+	WHERE events_users.id_event = ? AND events_users.id_user != events_users.id_host AND
+	events_users.id_user = users.id_user AND events_users.status = ?');
+	$stmt1->execute(array($id, 'Going'));
+	return $stmt1->fetchAll();
+  }
+  
+  function getNotGoing($id){
+	global $db;
+	  
+	$stmt2 = $db->prepare('SELECT username FROM events_users, users
+	WHERE events_users.id_event = ? AND events_users.id_user != events_users.id_host AND
+	events_users.id_user = users.id_user AND events_users.status = ?');
+	$stmt2->execute(array($id, 'Not going'));
+	return $stmt2->fetchAll();
+  }
 ?>

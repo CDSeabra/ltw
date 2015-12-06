@@ -5,13 +5,8 @@
 	include_once "database/users.php";
 
 	if(isset($_SESSION['username'])) {
-		$result = getAllEvents(true);
 		$invitations = getPendingInvites();
-	} else {
-		$result = getAllEvents(false);
 	}
-	
-	include "templates/header.php";
 	
 	$stmt = $db->prepare('SELECT * FROM events WHERE id_event = ?');
 	$stmt->execute(array($_GET['id']));
@@ -20,6 +15,10 @@
 	$id = $_GET['id'];
 	$comments = getEventsComments($db, $id);
 	
+	$going = getGoing($id);
+	$not_going = getNotGoing($id);
+	
+	include "templates/header.php";
 	include "templates/single_event.php";
 	include "templates/footer.php";	
 ?>

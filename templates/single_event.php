@@ -9,10 +9,12 @@
 			<span>Date: <?=$result['dat']?></span><br>
 			<span>Time: <?=$result['time_init']?></span><br>
 			<span>Privacy: <? if($result['privado'] == 'true') echo 'Private'; else echo 'Public' ;?></span><br>
-			<span>Host: <?= getHost($result['id_event']); ?></span>
+			<span>Host: <?= getHost($result['id_event']); ?></span><br>
+			<span><a href="users_going.php?id_event=<?=$result['id_event']?>"> Going/Not Going: <?= count($going); ?> / <?= count($not_going); ?></a></span>
 			</p>
 		</div>
-		
+		<!-- GOD'S GIFT -->
+		<div style="clear: both"></div>
 		<div id="comments">
 			<h3>Comments</h3>
 			<?php foreach($comments as $row) { ?>
