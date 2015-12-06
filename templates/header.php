@@ -38,7 +38,7 @@
 				<li><a href="see_invitations.php">See Invitations</a></li>
 			<?}?>
 				<li><form id="searchbar" action="search.php" method="post">
-					<input type="text" name="search" placeholder="Search" required style="width: 150px;"></input>
+					<input type="text" title="Search by event's name, type or place" name="search" placeholder="Search" required style="width: 150px;"></input>
 					<button id="searchbutton" type="submit" style="border: 0; background: transparent"><img src="bin/search.png" width="15" height="15" alt="submit" /></button>
 					</form>
 				</li>

@@ -1,11 +1,4 @@
-
-Fazer o Search --> M
-
 AJEITAR O CSS PARA TUDO --> nitidamente, Abrótea  --> arranjar os links com imagens de visto e cruz para a sidebar
-
-Sidebar com query correcta
-
-Sidebar com links dos eventos para usar JQUERY ao aceitar/recusar
 
 Eventos têm que dizer quantos users vão/não vão ao evento e ver quem???
 -----------------------------------------------------------------------------
