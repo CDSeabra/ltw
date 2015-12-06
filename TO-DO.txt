@@ -1,0 +1,28 @@
+AJEITAR O CSS PARA TUDO --> nitidamente, Abrótea  --> arranjar os links com imagens de visto e cruz para a sidebar e ajeitar formatação 
+							com 1º botões e depois título, não centrado, pk assim fica mesmo bem alinhadinho
+						  --> adicionar as mesmas imagens na página de going/not going antes do respetivo nome do utilizador
+						  
+Eventos têm que ver quem vai --> dados estão nos arrays going e not_going --> Abrótea
+
+Espalhar mais os dados do single event na horizontal --> Abrótea --> Type, Place em primeiro
+								     Date, Time em segundo
+								     Host, Privacy em terceiro
+								     Going/Not going em quarto (mais bonito do que apenas hyperlink)
+								     Description em último (e colocá-lo só a aparecer no single_event)
+
+Ajeitar os borders. Está mesmo esquisito em páginas como users_going e no invite_users, sobretudo.
+Deves ter isto em border-bottom de <div>'s e talvez devesses ter em border-top em alguns lados. --> Abrótea
+
+
+Povoar a base de dados com várias cenas decentes e bem construídas (sem derp, pls) --> Abrótea
+
+Fazer o readme como o prof pediu e submeter --> Abrótea
+
+-----------------------------------------------------------------------------
+Bugs:
+
+Não dá para selecionar texto nos single events porque...? lelwhat.png
+-----------------------------------------------------------------------------
+
+
+SÃO 5:37!!!!!!!!!
