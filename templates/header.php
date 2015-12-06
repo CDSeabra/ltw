@@ -27,7 +27,7 @@
 		<?} ?>
 			<div id="header">
 			<h1><a href='events.php'>Online Event Manager</a></h1>
-			<h2>The best manager in the world (well...)</h2>
+			<h2>The best manager in the world</h2>
 		</div>
 		<div id="menu">
 			<ul>
@@ -37,7 +37,7 @@
 				<li><a href="see_my_events.php">See My Events</a></li>
 				<li><a href="see_invitations.php">See Invitations</a></li>
 			<?}?>
-				<li><form id="searchbar" action="search.php" method="get">
+				<li><form id="searchbar" action="search.php" method="post">
 					<input type="text" name="search" placeholder="Search" required style="width: 150px;"></input>
 					<button id="searchbutton" type="submit" style="border: 0; background: transparent"><img src="bin/search.png" width="15" height="15" alt="submit" /></button>
 					</form>
@@ -48,8 +48,13 @@
 		<div id= "container">
 		<div id="sidebar">
 		<p> Pending Invites </p>
-		<?php foreach( $result as $row) {  ?>
-			 <a href="single_event.php?id=<?=$row['id_event']?>"><?= $row['name'] ?></a>
-		<?php } ?>    
+		<?php if(isset($_SESSION['username'])) {foreach( $invitations as $invite) {  ?>
+			<form id="login" action="action_sidebar.php" method="post">
+				<a href="single_event.php?id=<?=$invite['id_event']?>"><?= $invite['name'] ?></a>
+				<input type="hidden" name="id_event" value="<?=$invite['id_event']?>">
+				<input type="submit" name="going" value="G">			
+				<input type="submit" name="notgoing" value="N"></form>
+			</form>
+		<?php }} ?>    
 		</div>
 		
